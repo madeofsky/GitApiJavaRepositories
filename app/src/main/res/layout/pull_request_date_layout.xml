@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="6dp"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="#2496d8"
+        android:maxLength="15"
+        android:ellipsize="end"
+        tools:text="Created At:"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCreatedAtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewCreatedAt"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="#989ea0"
+        android:maxLength="15"
+        android:ellipsize="end"
+        tools:text="24/08/2020" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewUpdatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textViewCreatedAt"
+        android:layout_marginEnd="6dp"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="#2496d8"
+        android:maxLength="15"
+        android:ellipsize="end"
+        tools:text="Updated At:"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewUpdatedAtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewUpdatedAt"
+        android:layout_below="@+id/textViewCreatedAtDate"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="#989ea0"
+        android:maxLength="15"
+        android:ellipsize="end"
+        tools:text="12/09/2020"/>
+</RelativeLayout>

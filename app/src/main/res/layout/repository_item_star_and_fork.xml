@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewFork"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_git_fork"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewForks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle"
+        android:layout_marginEnd="12dp"
+        android:textStyle="bold"
+        android:textColor="#f8b84e"
+        tools:text="640"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewStar"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_git_star"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle"
+        android:textStyle="bold"
+        android:textColor="#f8b84e"
+        tools:text="98"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

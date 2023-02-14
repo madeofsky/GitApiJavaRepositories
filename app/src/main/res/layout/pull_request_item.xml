@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="22dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPullRequestTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#1f7aaf"
+                style="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="LeetCodeAnimation"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPullRequestDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_below="@id/textViewPullRequestTitle"
+                android:layout_alignParentStart="true"
+                android:textColor="#3e4141"
+                android:singleLine="false"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Demonstrate all the questions on LeetCode in the form of animation.（用动画的形式呈现解LeetCode题目的思路" />
+
+            <include
+                android:id="@+id/avatarLayout"
+                layout="@layout/pull_request_item_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/textViewPullRequestDescription"/>
+
+            <include
+                android:id="@+id/pullDateLayout"
+                layout="@layout/pull_request_date_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@id/lineSeparator" />
+
+            <View
+                android:id="@+id/lineSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/avatarLayout"
+                android:layout_marginTop="12dp"
+                android:background="#Dde1e2"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

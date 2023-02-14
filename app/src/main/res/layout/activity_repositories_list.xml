@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lukita.github_api_repositories.repositorieslist.ui.RepositoriesListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/repositoriesToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:title="Github JavaPop"
+        android:background="#282b28"
+        app:titleTextColor="@color/white"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingLottieAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="loading_lottie_animation.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/repositoriesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/repositoriesToolbar"
+        android:visibility="invisible"
+        tools:listitem="@layout/repository_item"/>
+
+</RelativeLayout>

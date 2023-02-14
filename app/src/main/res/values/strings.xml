@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Git Repositories</string>
+    <string name="pull_request_open_issues">%s opened</string>
+    <string name="pull_request_closed_issues"> / %s closed</string>
+</resources>

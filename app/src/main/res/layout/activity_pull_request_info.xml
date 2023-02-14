@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".pullrequestinfo.ui.PullRequestInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pullRequestsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        tools:title="Repository Name"
+        android:background="#282b28"
+        app:titleTextColor="@color/white" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/openClosedPullsLayout"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pullRequestsToolbar"
+        android:background="#Dde1e2"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewOpenedPulls"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f8b84e"
+            android:layout_marginEnd="4dp"
+            tools:text="16 opened"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewClosedPulls"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="/ 800 closed"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pullRequestsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/openClosedPullsLayout"
+        tools:listitem="@layout/pull_request_item"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingLottieAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="loading_lottie_animation.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/nothingToSeeHereLottieAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="nothing_here_lottie_animation.json"
+        app:lottie_loop="false"
+        app:lottie_speed="1"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
